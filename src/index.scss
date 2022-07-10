@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+}
+
+* {
+  font-family: 'Inter', system-ui;
+}
+
+.wrapper {
+  // background: rgb(255, 255, 255);
+  max-width: 1270px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 15px 325px;
+
+  .title {
+    font-family: 'Electrolize';
+    font-style: normal;
+    font-size: 32px;
+  }
+
+  .cart {
+    background-color: aqua;
+    border-radius: 10px;
+  }
+
+  .user {
+    height: 24px;
+  }
+
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
+
+  h3,
+  p {
+    margin: 0;
+  }
+}
