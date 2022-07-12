@@ -22,8 +22,8 @@ function Home({
 
   return (
     <div>
-      {/* <div className="d-flex align-center justify-between mb-40">
-        <h1>{searchValue ? `Search: "${searchValue}"` : 'All sneakers'}</h1>
+      <div className="d-flex align-center justify-between mb-40">
+        <h1>{searchValue ? `Search: "${searchValue}"` : 'All products'}</h1>
         <div className="search-block d-flex">
           <img src="img/search.svg" alt="Search" />
           {searchValue && (
@@ -36,7 +36,7 @@ function Home({
           )}
           <input onChange={onChangeSearchInput} value={searchValue} placeholder="Search..." />
         </div>
-      </div> */}
+      </div>
 
       <div className="d-flex flex-wrap justify-between">
         {/* <Card /> */}

@@ -31,6 +31,14 @@ export default function Card({ id, name, image, price, description, rating }) {
     setTotalToCart(price * selectedProducts);
   };
 
+  const checkForEmptySpace = (x) => {
+    if (x === 0 || x === '' || x === null) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   return (
     <>
       <div className={`${styles.overlay} ${isOpened ? styles.overlayVisible : ''}`}>
@@ -43,22 +51,22 @@ export default function Card({ id, name, image, price, description, rating }) {
             width="100%"
             height={'auto'}
             src={image}
-            alt="food"
+            alt={checkForEmptySpace(image) !== false ? 'food' : '-'}
           />
           <div className={`${styles.overlayCardInfo} ${'d-flex flex-column p-20'}`}>
             <div
               className={`${
                 styles.overlayCardInfoHeader
               } ${'d-flex justify-between align-center'}`}>
-              <h3>{name}</h3>
+              <h3>{checkForEmptySpace(name) !== false ? name : '-'}</h3>
               <b className="d-flex align-center">
                 <img className="mr-5" width={16} height={16} src="/img/rating.svg" alt="rating" />
-                {rating}
+                {checkForEmptySpace(rating) !== false ? rating : '-'}
               </b>
             </div>
             <div className={`${styles.overlayCardInfoBody} ${'d-flex flex-column'}`}>
-              <span>{price} €</span>
-              <p>{description}</p>
+              <span>{checkForEmptySpace(price) !== false ? price : '-'} €</span>
+              <p>{checkForEmptySpace(description) !== false ? description : '-'}</p>
             </div>
             <div className={`${styles.overlayCardInfoFooter} ${'d-flex align-center mt-20'}`}>
               <div
@@ -94,11 +102,17 @@ export default function Card({ id, name, image, price, description, rating }) {
         </div>
       </div>
       <div className={styles.card}>
-        <img onClick={productDetailedInfo} width="100%" height={170} src={image} alt="food" />
+        <img
+          onClick={productDetailedInfo}
+          width="100%"
+          height={170}
+          src={image}
+          alt={checkForEmptySpace(image) !== false ? 'food' : '-'}
+        />
         <div className="d-flex flex-column">
-          <h4>{name}</h4>
+          <h4>{checkForEmptySpace(name) !== false ? name : '-'}</h4>
           <div className="d-flex justify-between align-center">
-            <span>{price} €</span>
+            <span>{checkForEmptySpace(price) !== false ? price : '-'} €</span>
             <button onClick={addToCart} className={styles.addButton}>
               Add
             </button>

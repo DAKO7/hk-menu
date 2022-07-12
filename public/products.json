@@ -4,7 +4,7 @@
         "description": "Avokaado, lumekrab, kurk, lendkalamari, lõhe",
         "image": "https://storage.googleapis.com/staging-psl-assets/uploads/5ebad32b002620.17633838.jpeg",
         "rating": 1.77,
-        "price": 16.99
+        "price": 0
     },
     {
         "name": "Azuma (#85)",
@@ -18,7 +18,7 @@
         "description": "",
         "image": "https://storage.googleapis.com/staging-psl-assets/uploads/5ebad2bd375de1.83109538.jpeg",
         "rating": 3.98,
-        "price": 4.99
+        "price": ""
     },
     {
         "name": "Juurvilja maki (#89)",

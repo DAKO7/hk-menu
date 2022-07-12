@@ -34,6 +34,10 @@ function App() {
     fetchData();
   }, []);
 
+  const onChangeSearchInput = (event) => {
+    setSearchValue(event.target.value);
+  };
+
   return (
     <div className="clear">
       <Header />
@@ -47,7 +51,7 @@ function App() {
                 // cartItems={cartItems}
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
-                // onChangeSearchInput={onChangeSearchInput}
+                onChangeSearchInput={onChangeSearchInput}
                 // onAddToCart={onAddToCart}
                 isLoading={isLoading}
               />
