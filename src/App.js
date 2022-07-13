@@ -19,8 +19,8 @@ function App() {
     async function fetchData() {
       try {
         const [ProductsResponse, cartResponse] = await Promise.all([
-          axios.get('products.json'),
-          axios.get('cart.json'),
+          axios.get('http://localhost:3001/products'),
+          axios.get('http://localhost:3001/cart'),
         ]);
 
         setIsLoading(false);
@@ -44,8 +44,7 @@ function App() {
       //   await axios.delete(`cart.json/${findItem.id}`);
       // } else {
       setCartProducts((prev) => [...prev, obj]);
-      console.log('123');
-      const { data } = await axios.post('cart.json', obj);
+      const { data } = await axios.post('http://localhost:3001/cart', obj);
       setCartProducts((prev) =>
         prev.map((product) => {
           if (product.id === data.id) {
@@ -65,8 +64,9 @@ function App() {
 
   const onRemoveProduct = (id) => {
     try {
-      axios.delete(`cart.json/${id}`);
-      setCartProducts((prev) => prev.filter((item) => Number(item.id) !== Number(id)));
+      axios.delete(`http://localhost:3001/cart/${id}`);
+      setCartProducts((prev) => prev.filter((product) => Number(product.id) !== Number(id)));
+      console.log(id);
     } catch (error) {
       alert('Unable to remove item from cart');
       console.error(error);
