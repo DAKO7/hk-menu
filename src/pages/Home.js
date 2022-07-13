@@ -6,7 +6,6 @@ function Home({
   searchValue,
   setSearchValue,
   onChangeSearchInput,
-  onAddToFavorite,
   onAddToCart,
   isLoading,
 }) {
@@ -16,14 +15,14 @@ function Home({
       product.name.toLowerCase().includes(searchValue.toLowerCase()),
     );
     return (isLoading ? [...Array(11)] : filteredProducts).map((product, index) => (
-      <Card key={index} loading={isLoading} {...product} />
+      <Card key={index} onAdd={(obj) => onAddToCart(obj)} loading={isLoading} {...product} />
     ));
   };
 
   return (
     <div>
       <div className="d-flex align-center justify-between mb-40">
-        <h1>{searchValue ? `Search: "${searchValue}"` : 'All products'}</h1>
+        <h2>{searchValue ? `Search: "${searchValue}"` : 'All products'}</h2>
         <div className="search-block d-flex">
           <img src="img/search.svg" alt="Search" />
           {searchValue && (

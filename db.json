@@ -1,4 +1,19 @@
-[
+{
+  "cart": [
+    {
+     "id": "1",
+     "name": "Blaska (#854)",
+     "image": "https://storage.googleapis.com/staging-psl-assets/uploads/5ebad32b002620.17633838.jpeg",
+     "price": 15
+    },
+    {
+     "id": "2",
+     "name": "Alaska (#84)",
+     "image": "https://storage.googleapis.com/staging-psl-assets/uploads/5ebad32b002620.17633838.jpeg",
+     "price": 10
+    }
+   ],
+  "products": [
     {
       "id": 1,
         "name": "Alaska (#84)",
@@ -904,3 +919,4 @@
         "price": 19.99
     }
 ]
+}

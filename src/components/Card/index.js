@@ -1,14 +1,17 @@
 import React from 'react';
 
+import AppContext from '../../context';
+
 import styles from './Card.module.scss';
 
-export default function Card({ id, name, image, price, description, rating }) {
+export default function Card({ id, name, image, price, description, rating, onAdd }) {
+  const { isProductAdded } = React.useContext(AppContext);
   const [isOpened, setIsOpened] = React.useState(false);
   const [selectedProducts, setSelectedProducts] = React.useState(1);
   // const [price, setPrice] = React.useState(9.99);
   const [totalToCart, setTotalToCart] = React.useState(0);
 
-  const obj = { id, parentId: id, name, image, price, description, rating };
+  const obj = { id, name, image, price, description, rating };
 
   const productDetailedInfo = () => {
     setIsOpened(!isOpened);
@@ -16,7 +19,7 @@ export default function Card({ id, name, image, price, description, rating }) {
   };
 
   const addToCart = () => {
-    console.log('added');
+    onAdd(obj);
   };
 
   const addOneProduct = () => {
