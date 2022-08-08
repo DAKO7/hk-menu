@@ -1,14 +1,5 @@
 {
-  "cart": [
-    {
-      "name": "Juurvilja maki (#89)",
-      "image": "https://storage.googleapis.com/staging-psl-assets/uploads/5ebad29c296987.25477171.jpeg",
-      "price": 15.99,
-      "description": "Avokaado, philadelphia, kurk, merevetika, paprika, salat, tomat",
-      "rating": 4.32,
-      "id": 1
-    }
-  ],
+  "cart": [],
   "products": [
     {
       "id": 1,
@@ -19,6 +10,7 @@
       "price": 0
     },
     {
+      "id": 2,
       "name": "Azuma (#85)",
       "description": "Hiidkrevett, lumekrab, philadelphia",
       "image": "https://storage.googleapis.com/staging-psl-assets/uploads/5ebad308aa71a6.30027541.jpeg",
@@ -26,6 +18,7 @@
       "price": null
     },
     {
+      "id": 3,
       "name": "Draakon (#141)",
       "description": "",
       "image": "https://storage.googleapis.com/staging-psl-assets/uploads/5ebad2bd375de1.83109538.jpeg",
@@ -33,6 +26,7 @@
       "price": ""
     },
     {
+      "id": 4,
       "name": "Juurvilja maki (#89)",
       "description": "Avokaado, philadelphia, kurk, merevetika, paprika, salat, tomat",
       "image": "https://storage.googleapis.com/staging-psl-assets/uploads/5ebad29c296987.25477171.jpeg",
@@ -40,6 +34,7 @@
       "price": 15.99
     },
     {
+      "id": 5,
       "name": "Kalifornia (#80)",
       "description": "Avokaado, lumekrabi, kurk",
       "image": "https://storage.googleapis.com/staging-psl-assets/uploads/5ebad272b22d45.25798418.jpeg",
@@ -47,6 +42,7 @@
       "price": 16.99
     },
     {
+      "id": 6,
       "name": "Kawaii maki (#1909)",
       "description": "Lõhe, kurk, philadelphia, lumekrabi, mozzarella, terav kaste",
       "image": "https://storage.googleapis.com/staging-psl-assets/uploads/5ec3e498e34cf3.77264195.jpeg",
@@ -54,6 +50,7 @@
       "price": 21.99
     },
     {
+      "id": 7,
       "name": "Krõmpsuv kana maki (#127)",
       "description": "Krõmpsuv kana, philadelphia, salat, tomat",
       "image": "https://storage.googleapis.com/staging-psl-assets/uploads/5ebad250167e17.89436693.jpeg",
@@ -61,6 +58,7 @@
       "price": 14.99
     },
     {
+      "id": 8,
       "name": "Angerja maki (#58)",
       "description": "",
       "image": "https://storage.googleapis.com/staging-psl-assets/uploads/5ecd17ed078271.18316990.jpeg",
@@ -68,6 +66,7 @@
       "price": 19.99
     },
     {
+      "id": 9,
       "name": "Avokaado maki (#51)",
       "description": "",
       "image": "https://storage.googleapis.com/staging-psl-assets/uploads/5ecd1982bfeb27.99274770.jpeg",
@@ -75,6 +74,7 @@
       "price": 12.99
     },
     {
+      "id": 10,
       "name": "Hoso lõhe maki (#52)",
       "description": "",
       "image": "https://storage.googleapis.com/staging-psl-assets/uploads/5ecd19f5ae9719.72059292.jpeg",

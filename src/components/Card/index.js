@@ -72,7 +72,7 @@ export default function Card({ id, name, image, price, description, rating, onAd
               <p>{checkForEmptySpace(description) !== false ? description : '-'}</p>
             </div>
             <div className={`${styles.overlayCardInfoFooter} ${'d-flex align-center mt-20'}`}>
-              <div
+              {/* <div
                 className={`${styles.countButton} ${'d-flex justify-between align-center p-10'}`}>
                 <img
                   onClick={selectedProducts > 1 ? removeOneProduct : ''}
@@ -93,7 +93,7 @@ export default function Card({ id, name, image, price, description, rating, onAd
                   src="/img/plus.svg"
                   alt="plus"
                 />
-              </div>
+              </div> */}
               <button
                 onClick={addToCart}
                 className={`${styles.bigAddButton} ${'d-flex flex-column justify-around p-5'}`}>
@@ -112,9 +112,9 @@ export default function Card({ id, name, image, price, description, rating, onAd
           src={image}
           alt={checkForEmptySpace(image) !== false ? 'food' : '-'}
         />
-        <div className="d-flex flex-column">
+        <div className={`${styles.cardFooter} ${'d-flex flex-column'}`}>
           <h4>{checkForEmptySpace(name) !== false ? name : '-'}</h4>
-          <div className="d-flex justify-between align-center">
+          <div className={`${styles.info} ${'d-flex justify-between align-center info'}`}>
             <span>{checkForEmptySpace(price) !== false ? price : '-'} €</span>
             <button onClick={addToCart} className={styles.addButton}>
               Add

@@ -62,13 +62,14 @@ function App() {
     }
   };
 
-  const onRemoveProduct = (id) => {
+  const onRemoveProduct = (id, name, obj) => {
     try {
       axios.delete(`http://localhost:3001/cart/${id}`);
       setCartProducts((prev) => prev.filter((product) => Number(product.id) !== Number(id)));
-      console.log(id);
+      console.log(id, name, obj);
     } catch (error) {
       alert('Unable to remove item from cart');
+      console.log(id, name, obj);
       console.error(error);
     }
   };
@@ -78,6 +79,7 @@ function App() {
   };
 
   const isProductAdded = (id) => {
+    console.log(id);
     return cartProducts.some((obj) => Number(obj.parentId) === Number(id));
   };
 

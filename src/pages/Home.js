@@ -21,23 +21,29 @@ function Home({
 
   return (
     <div>
-      <div className="d-flex align-center justify-between mb-40">
-        <h2>{searchValue ? `Search: "${searchValue}"` : 'All products'}</h2>
-        <div className="search-block d-flex">
-          <img src="img/search.svg" alt="Search" />
-          {searchValue && (
+      <div className="d-flex flex-column align-center justify-center mb-40">
+        {/* <h2>{searchValue ? `Search: "${searchValue}"` : 'All products'}</h2> */}
+        <div className="d-flex searchBlock">
+          {/* <img className="searchImage" src="img/search.svg" alt="Search" /> */}
+          {searchValue ? (
             <img
               onClick={() => setSearchValue('')}
               className="clear cu-p"
               src="img/btn-remove.svg"
               alt="Clear"
             />
+          ) : (
+            <img className="searchImage" src="img/search.svg" alt="Search" />
           )}
-          <input onChange={onChangeSearchInput} value={searchValue} placeholder="Search..." />
+          <input
+            onChange={onChangeSearchInput}
+            value={searchValue}
+            placeholder="Search your delicious food..."
+          />
         </div>
       </div>
 
-      <div className="d-flex flex-wrap justify-between">
+      <div className="d-flex flex-wrap justify-around">
         {/* <Card /> */}
         {renderProducts()}
       </div>
